@@ -1,3 +1,15 @@
-export default function MainPhoto() {
-  return <div>MainPhoto</div>;
+import { Photo } from "../types";
+
+interface MainPhotoProps {
+  activePhoto: Photo;
+  prevPhoto?: Photo;
+  nextPhoto?: Photo;
 }
+
+export const MainPhoto: React.FC<MainPhotoProps> = ({
+  activePhoto,
+  prevPhoto,
+  nextPhoto,
+}) => {
+  return <div>MainPhoto</div>;
+};
