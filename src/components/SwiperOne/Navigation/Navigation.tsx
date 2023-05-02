@@ -20,14 +20,14 @@ export const Navigation: React.FC<NavigationProps> = ({
   return (
     <div className={cn(className, css.navigation)}>
       <button
-        className={cn(css.navBtn, css.navBtnPrev)}
+        className={cn(css.navigationBtn, css.navigationBtnPrev)}
         disabled={disabledPrev}
         onClick={onPrevClick}
       >
         prevPhoto
       </button>
       <button
-        className={cn(css.navBtn, css.navBtnNext)}
+        className={cn(css.navigationBtn, css.navigationBtnNext)}
         disabled={disabledNext}
         onClick={onNextClick}
       >

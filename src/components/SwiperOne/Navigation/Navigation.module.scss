@@ -1,0 +1,42 @@
+.navigation {
+  display: inline-flex;
+  gap: 5px;
+  padding: 5px;
+
+  background: rgba(155, 154, 154, 0.4);
+  border-radius: 5px;
+
+  &Btn {
+    display: block;
+    padding: 0;
+
+    background: #003049 no-repeat center center;
+    background-size: 50% auto;
+
+    min-width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-indent: -1000em;
+
+    transition: opacity 0.3s, background-color 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    &:disabled {
+      background-color: transparent;
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    &Prev {
+      background-image: url("./svg/arrow-left.svg");
+    }
+    &Next {
+      background-image: url("./svg/arrow-right.svg");
+    }
+  }
+}

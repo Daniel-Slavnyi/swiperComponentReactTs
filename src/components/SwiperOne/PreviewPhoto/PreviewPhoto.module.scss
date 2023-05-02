@@ -1,0 +1,54 @@
+.previewPhoto {
+  width: 492px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+
+  &List {
+    position: relative;
+    left: 164px;
+    display: flex;
+    white-space: nowrap;
+    transition: transform 0.5s ease;
+  }
+
+  &Item {
+    display: inline-block;
+    margin: 5px;
+
+    min-width: 154px;
+    height: 90px;
+
+    border-radius: 5px;
+    background-color: rgb(164, 177, 177);
+    overflow: hidden;
+  }
+
+  &Img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &Wrap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 164px;
+    height: 100%;
+
+    transform: translateX(-50%);
+    z-index: 2;
+
+    background: rgba(196, 187, 187, 0.418);
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font: 24px/1 Georgia;
+  }
+}

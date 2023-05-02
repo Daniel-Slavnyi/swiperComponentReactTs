@@ -35,7 +35,7 @@ export const SwiperOne: React.FC<SwiperOneProps> = ({ photos }) => {
         <Navigation
           disabledPrev={!prevPhoto}
           disabledNext={!nextPhoto}
-          className={css.navigationGallery}
+          className={css.swipeGalleryNavigation}
           onPrevClick={() => {
             setIndexOfActivePhoto(indexOfActivePhoto - 1);
           }}
@@ -44,7 +44,11 @@ export const SwiperOne: React.FC<SwiperOneProps> = ({ photos }) => {
           }}
         />
       </div>
-      <PreviewPhoto photos={photos} indexOfActivePhoto={indexOfActivePhoto} />
+      <PreviewPhoto
+        photos={photos}
+        indexOfActivePhoto={indexOfActivePhoto}
+        className={css.PreviewPhotoList}
+      />
     </div>
   );
 };
