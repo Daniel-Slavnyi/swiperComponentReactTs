@@ -6,6 +6,8 @@ import { MainPhoto } from "./MainPhoto/MainPhoto";
 import { Navigation } from "./Navigation/Navigation";
 import { PreviewPhoto } from "./PreviewPhoto/PreviewPhoto";
 
+import css from "./SwiperOne.module.scss";
+
 interface SwiperOneProps {
   photos: Photo[];
 }
@@ -22,16 +24,18 @@ export const SwiperOne: React.FC<SwiperOneProps> = ({ photos }) => {
   const nextPhoto = photos[indexOfActivePhoto + 1];
 
   return (
-    <div>
-      <div>
+    <div className={css.swipeGallery}>
+      <div className={css.swipeGalleryContainer}>
         <MainPhoto
           activePhoto={activePhoto}
           prevPhoto={prevPhoto}
           nextPhoto={nextPhoto}
+          className={css.mainPhotoGallery}
         />
         <Navigation
           disabledPrev={!prevPhoto}
           disabledNext={!nextPhoto}
+          className={css.navigationGallery}
           onPrevClick={() => {
             setIndexOfActivePhoto(indexOfActivePhoto - 1);
           }}

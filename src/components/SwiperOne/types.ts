@@ -4,3 +4,7 @@ export interface Photo {
   preview: string;
   description: string;
 }
+
+export interface CommonClassProps {
+  className: string;
+}
