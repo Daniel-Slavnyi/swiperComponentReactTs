@@ -19,7 +19,6 @@ export const SwiperOne: React.FC<SwiperOneProps> = ({ photos }) => {
     return null;
   }
 
-  const activePhoto = photos[indexOfActivePhoto];
   const prevPhoto = photos[indexOfActivePhoto - 1];
   const nextPhoto = photos[indexOfActivePhoto + 1];
 
