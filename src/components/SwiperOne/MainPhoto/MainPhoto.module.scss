@@ -13,17 +13,24 @@
     top: 0;
     left: 0;
 
-    display: block;
+    display: none;
+    opacity: 0;
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
     z-index: 2;
+    transition: opacity 0.6s;
+  }
 
-    &Prev,
-    &Next {
-      z-index: 1;
-    }
+  &Image[data-active="true"] {
+    display: block;
+    opacity: 1;
+    z-index: 3;
+  }
+
+  &Image[data-active="prepared"] {
+    display: block;
   }
 }

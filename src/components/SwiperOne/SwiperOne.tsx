@@ -27,9 +27,8 @@ export const SwiperOne: React.FC<SwiperOneProps> = ({ photos }) => {
     <div className={css.swipeGallery}>
       <div className={css.swipeGalleryContainer}>
         <MainPhoto
-          activePhoto={activePhoto}
-          prevPhoto={prevPhoto}
-          nextPhoto={nextPhoto}
+          photos={photos}
+          indexOfActivePhoto={indexOfActivePhoto}
           className={css.mainPhotoGallery}
         />
         <Navigation

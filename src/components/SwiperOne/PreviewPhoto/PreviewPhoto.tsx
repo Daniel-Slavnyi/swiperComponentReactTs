@@ -30,11 +30,13 @@ export const PreviewPhoto: React.FC<PreviewPhotoProps> = ({
           <ul className={css.previewPhotoList} ref={previewContainer}>
             {photos.map((item) => (
               <li key={item.id} className={css.previewPhotoItem}>
-                <img
-                  src={item.preview}
-                  alt={item.description}
-                  className={css.previewPhotoImg}
-                />
+                <button>
+                  <img
+                    src={item.preview}
+                    alt={item.description}
+                    className={css.previewPhotoImg}
+                  />
+                </button>
               </li>
             ))}
           </ul>
