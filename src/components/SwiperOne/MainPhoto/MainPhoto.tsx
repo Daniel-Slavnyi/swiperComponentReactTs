@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { CommonClassProps, Photo } from "../types";
 
 import cn from "classnames";
