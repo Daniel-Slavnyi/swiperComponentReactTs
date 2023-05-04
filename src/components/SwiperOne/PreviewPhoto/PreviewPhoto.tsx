@@ -7,12 +7,14 @@ import css from "./PreviewPhoto.module.scss";
 interface PreviewPhotoProps extends CommonClassProps {
   photos: Photo[];
   indexOfActivePhoto: number;
+  setNewPhoto: (idx: number) => void;
 }
 
 export const PreviewPhoto: React.FC<PreviewPhotoProps> = ({
   photos,
   indexOfActivePhoto,
   className,
+  setNewPhoto,
 }) => {
   const previewContainer = useRef<HTMLUListElement>(null);
 
@@ -28,9 +30,14 @@ export const PreviewPhoto: React.FC<PreviewPhotoProps> = ({
       {useMemo(
         () => (
           <ul className={css.previewPhotoList} ref={previewContainer}>
-            {photos.map((item) => (
-              <li key={item.id} className={css.previewPhotoItem}>
-                <button>
+            {photos.map((item, idx) => (
+              <li key={item.id}>
+                <button
+                  className={css.previewPhotoBtn}
+                  onClick={() => {
+                    setNewPhoto(idx);
+                  }}
+                >
                   <img
                     src={item.preview}
                     alt={item.description}

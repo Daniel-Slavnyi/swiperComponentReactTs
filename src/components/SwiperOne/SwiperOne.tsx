@@ -46,6 +46,7 @@ export const SwiperOne: React.FC<SwiperOneProps> = ({ photos }) => {
         photos={photos}
         indexOfActivePhoto={indexOfActivePhoto}
         className={css.PreviewPhotoList}
+        setNewPhoto={setIndexOfActivePhoto}
       />
     </div>
   );

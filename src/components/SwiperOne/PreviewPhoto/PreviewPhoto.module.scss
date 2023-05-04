@@ -12,16 +12,20 @@
     transition: transform 0.5s ease;
   }
 
-  &Item {
+  &Btn {
     display: inline-block;
     margin: 5px;
+    padding: 0;
 
     min-width: 154px;
     height: 90px;
 
+    border: none;
     border-radius: 5px;
     background-color: rgb(164, 177, 177);
     overflow: hidden;
+
+    cursor: pointer;
   }
 
   &Img {
